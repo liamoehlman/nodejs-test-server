@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/liamoehlman/nodejs-test-server.git"
   },
+  "dependencies": {
+    "request": "latest"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
