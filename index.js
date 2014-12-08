@@ -9,7 +9,7 @@ http.createServer(function (req, res) {
     if (req.url === "/servers") {
         request("http://169.254.169.254/latest/meta-data/instance-id", function(error, response, body) {
             res.writeHead(200, {'Content-Type': 'text/plain'});
-            res.end(body);
+            setTimeout(function() { res.end(body) }, 10000);
         })
     } else {
         res.writeHead(200, {'Content-Type': 'text/plain'});
