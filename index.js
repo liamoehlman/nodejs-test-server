@@ -1,4 +1,9 @@
 var http = require('http');
+
+if (! process.env.PORT) {
+    throw new Error('Port not specified');
+}
+
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
